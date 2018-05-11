@@ -42,6 +42,6 @@ models.sequelize.sync().then(function(){
 });
 
 app.listen(5000, function(err){
-    if(!err)
+  if(!err)
     console.log("Site is live"); else console.log(err)
 });

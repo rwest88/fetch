@@ -5,13 +5,13 @@ var session    = require('express-session')
 var bodyParser = require('body-parser')
 var env        = require('dotenv').load()
 var exphbs     = require('express-handlebars')
+var path       = require('path');
 
 //For BodyParser
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-
-    // For Passport
+// For Passport
 app.use(session({ secret: 'keyboard cat',resave: true, saveUninitialized:true})); // session secret
 app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
@@ -22,7 +22,8 @@ app.engine('hbs', exphbs({extname: '.hbs'}));
 app.set('view engine', '.hbs');    
 
 app.get('/', function(req, res){
-    res.send('Welcome to Passport with Sequelize');
+    console.log('endpoint hit!');
+    res.sendFile(path.join(__dirname + '/index.html'));
 });
 
 //Models

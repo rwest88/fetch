@@ -2,8 +2,8 @@
   "development": {
 
     "username": "root",
-    "password": null,
-    "database": "sequelize_passport",
+    "password": "",
+    "database": "fetch_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },

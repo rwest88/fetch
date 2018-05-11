@@ -1,4 +1,4 @@
-# fetch
+# Fetch
 Fetch dog rental service application for the University of Richmond's coding bootcamp.
 
 ## Assumptions

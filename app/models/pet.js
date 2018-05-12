@@ -1,17 +1,18 @@
 module.exports = function(sequelize, DataTypes) {
     var Pet = sequelize.define("Pet", {
-      title: {
+      id: {autoIncrement: true, primaryKey: true, type: DataTypes.INTEGER},
+      name: {
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
           len: [1]
         }
       },
-      body: {
-        type: DataTypes.TEXT,
-        allowNull: false,
-        len: [1]
-      }
+      imageURL: {type: DataTypes.STRING, allowNull: true},
+      about: {type: DataTypes.TEXT, allowNull: false},
+      type: {type: DataTypes.STRING, allowNull: false},
+      breed: {type: DataTypes.STRING, allowNull: true},
+      owner: {type: DataTypes.STRING}
     });
   
     Pet.associate = function(models) {
@@ -27,5 +28,4 @@ module.exports = function(sequelize, DataTypes) {
     // Add a belongsTo association to Authors here
     // Example: https://github.com/sequelize/express-example/blob/master/models/task.js
     return Pet;
-};
-  
+ };

@@ -2,7 +2,7 @@
   "development": {
 
     "username": "root",
-    "password": "Nowuckinfurries3612",
+    "password": "",
     "database": "fetch_db",
     "host": "127.0.0.1",
     "dialect": "mysql"

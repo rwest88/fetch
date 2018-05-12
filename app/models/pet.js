@@ -1,6 +1,7 @@
 module.exports = function(sequelize, DataTypes) {
     var Pet = sequelize.define("Pet", {
-      title: {
+      id: {autoIncrement: true, primaryKey: true, type: Sequelize.INTEGER},
+      name: {
         type: DataTypes.STRING,
         allowNull: false,
         validate: {

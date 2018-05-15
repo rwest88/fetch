@@ -35,6 +35,7 @@ var authRoute = require('./app/routes/auth.js')(app,passport);
 require('./app/config/passport/passport.js')(passport,db.user);
 
 // rest routes
+require('./app/routes/userRoute.js')(app);
 require('./app/routes/petRoute.js')(app);
 
 //Sync Database

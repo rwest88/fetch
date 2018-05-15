@@ -32,7 +32,7 @@ var db = require("./app/models");
 var authRoute = require('./app/routes/auth.js')(app,passport);
 
 //load passport strategies
-require('./app/config/passport/passport.js')(passport,db.user);
+require('./app/config/passport/passport.js')(passport, db.User);
 
 // rest routes
 require('./app/routes/userRoute.js')(app);

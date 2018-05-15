@@ -1,4 +1,5 @@
 var authController = require('../controllers/authcontroller.js');
+var authCheckService = require('../services/authCheckService.js');
 
 module.exports = function(app, passport) {
     app.get('/signup', authController.signup);
@@ -9,7 +10,7 @@ module.exports = function(app, passport) {
         { successRedirect: '/dashboard', failureRedirect: '/signup'}
     ));
 
-    app.get('/dashboard',isLoggedIn, authController.dashboard);
+    app.get('/dashboard', authCheckService.isAuthenticated, authController.dashboard);
 
     app.get('/logout',authController.logout);
 
@@ -17,12 +18,12 @@ module.exports = function(app, passport) {
         { successRedirect: '/dashboard', failureRedirect: '/signin'}
     ));
 
-    function isLoggedIn(req, res, next) {
-        if (req.isAuthenticated())
-            return next();
+    // function isLoggedIn(req, res, next) {
+    //     if (req.isAuthenticated())
+    //         return next();
 
-        res.redirect('/signin');
-    }
+    //     res.redirect('/signin');
+    // }
 }
 
 

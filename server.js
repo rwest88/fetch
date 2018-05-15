@@ -34,6 +34,9 @@ var authRoute = require('./app/routes/auth.js')(app,passport);
 //load passport strategies
 require('./app/config/passport/passport.js')(passport,db.user);
 
+// rest routes
+require('./app/controllers/petcontroller.js')(app);
+
 //Sync Database
 db.sequelize.sync().then(function(){
   console.log('Nice! Database looks fine');

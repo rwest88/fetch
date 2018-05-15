@@ -22,8 +22,8 @@ app.engine('hbs', exphbs({extname: '.hbs'}));
 app.set('view engine', '.hbs');    
 
 app.get('/', function(req, res){
-    console.log('endpoint hit!');
-    res.sendFile(path.join(__dirname + '/index.html'));
+  console.log('endpoint hit!');
+  res.sendFile(path.join(__dirname + '/index.html'));
 });
 
 var db = require("./app/models");

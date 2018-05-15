@@ -11,5 +11,4 @@ INSERT INTO Users (firstname, lastname, username, about, email, password)
     "jpjones@whatever.com", "$2a$08$yGr0c8J1CnOOO5nVnGR2Y.jT1Ix5nZ/HhXQNF8FSGtRJ0ML33v2QK");
 INSERT INTO Users (firstname, lastname, username, about, email, password) 
     VALUES ("John", "Bonham", "jbonham", "A default dummy data user for Led Zeppelin drummer John Bonham", 
-    "jbonham@whatever.com", "$2a$08$yGr0c8J1CnOOO5nVnGR2Y.jT1Ix5nZ/HhXQNF8FSGtRJ0ML33v2QK");
-    
+    "jbonham@whatever.com", "$2a$08$yGr0c8J1CnOOO5nVnGR2Y.jT1Ix5nZ/HhXQNF8FSGtRJ0ML33v2QK");    

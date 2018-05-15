@@ -13,6 +13,8 @@ module.exports = function(sequelize, DataTypes) {
       type: {type: DataTypes.STRING, allowNull: false},
       breed: {type: DataTypes.STRING, allowNull: true},
       owner: {type: DataTypes.STRING}
+    }, {
+      timestamps: false
     });
   
     Pet.associate = function(models) {

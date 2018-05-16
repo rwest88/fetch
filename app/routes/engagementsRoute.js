@@ -9,5 +9,23 @@ module.exports = function (app, db, bodyParser, authCheckService) {
         db.Engagement.findAll({}).then(function (engagements) {
             res.send(engagements);
         }); 
-    });         
+    });
+    
+    app.post('/api/engagement/pet/:PetId/user/:UserId', 
+        authCheckService.isAuthenticated, (req, res) => {
+        
+        var newEngagement = {
+            date: req.body.date,
+            name: req.body.name,
+            address: req.body.address,
+            UserId: req.params.UserId,
+            PetId: req.params.PetId
+        };
+
+        db.Engagement.create(newEngagement).then((response) => {
+            res.status(201).send(response);
+        }).catch((err) => {
+            res.status(500).send('Ooopsie whoopsie: ' + err);
+        });
+    });
 };

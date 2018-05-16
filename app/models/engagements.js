@@ -8,7 +8,8 @@ module.exports = function(sequelize, DataTypes) {
           len: [1]
         }
       },
-      date: {type: DataTypes.DATE, allowNull: false}
+      date: {type: DataTypes.DATE, allowNull: false},
+      address: {type: DataTypes.STRING, allowNull: false}
     }, {
       timestamps: false
     });

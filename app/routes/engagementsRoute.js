@@ -28,4 +28,20 @@ module.exports = function (app, db, bodyParser, authCheckService) {
             res.status(500).send('Ooopsie whoopsie: ' + err);
         });
     });
+
+    app.delete('/api/engagement/:engagementId', 
+        authCheckService.isAuthenticated, (req, res) => {
+        
+        var engagementId = req.params.engagementId;            
+        
+        db.Engagement.destroy({
+            where: {
+                id: engagementId
+            }
+        }).then((response) => {
+            res.status(204); // 204 == No Content
+        }).catch((err) => {
+            res.status(500).send('Ooopsie whoopsie: ' + err);
+        }); 
+    });
 };

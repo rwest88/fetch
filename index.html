@@ -19,7 +19,7 @@
                 <div class="container">
                     <div class="navbar-brand">
                         <a class="navbar-item">
-                            <img src="images/fetch.png" id="logo" alt="Logo" >
+                            <img src="assets/images/fetch.png" id="logo" alt="Logo" >
                         </a>
                         <span class="navbar-burger burger" data-target="navbarMenuHeroA">
                             <span></span>
@@ -33,9 +33,11 @@
                             <a class="navbar-item">
                                 Available Pets
                             </a>
-                            <a class="navbar-item">
-                                Sign-In
+                            <a class="navbar-item" href="signin">
+                            Sign In
                             </a>
+                                
+                            
 
                         </div>
                     </div>
@@ -49,6 +51,7 @@
             <div class="container has-text-centered">
 
                 <h2 class="subtitle">
+                        <div class="field is-grouped">
                     <button class="button is-large modal-button people-button" id="people" data-target="modal-ter">Animal Person? Register Here</button>
                     <div class="modal" id="people-modal">
                         <div class="modal-background"></div>
@@ -87,8 +90,9 @@
                                                 <select>
                                                   <option>Dog</option>
                                                   <option>Cat</option>
-                                                  <option>Rabbit</option>
-                                                  <option>Lizard</option>
+                                                  <option>Bird</option>
+                                                  <option>Reptile</option>
+                                                  <option>Small Mammal</option>
 
 
 
@@ -113,18 +117,7 @@
                                             </div>
                                           </div>
                                           
-                                          <div class="field">
-                                            <div class="control">
-                                              <label class="radio">
-                                                <input type="radio" name="question">
-                                                Yes
-                                              </label>
-                                              <label class="radio">
-                                                <input type="radio" name="question">
-                                                No
-                                              </label>
-                                            </div>
-                                          </div>
+                                       
                                           
                                           <div class="field is-grouped">
                                             <div class="control">
@@ -149,11 +142,74 @@
                         <div class="modal-background"></div>
                         <div class="modal-card">
                             <header class="modal-card-head">
-                                <p class="modal-card-title">Modal title</p>
+                                <p class="modal-card-title">Register Your Pet</p>
                                 <button class="delete" aria-label="close"></button>
                             </header>
                             <section class="modal-card-body">
-                                <!-- Content ... -->
+                                    <div class="field">
+                                            <label class="label">My Name</label>
+                                            <div class="control">
+                                              <input class="input" type="text">
+                                            </div>
+                                          </div>
+
+                                          <div class="field">
+                                            <label class="label">Owner's Name</label>
+                                            <div class="control">
+                                              <input class="input" type="text">
+                                            </div>
+                                          </div>
+                                          
+                                          
+                                          <div class="field">
+                                            <label class="label">Owner's Email</label>
+                                            <div class="control has-icons-left has-icons-right">
+                                              <input class="input" type="email">
+                                              <span class="icon is-small is-left">
+                                                <i class="fas fa-envelope"></i>
+                                              </span>
+                                              <span class="icon is-small is-right">
+                                                <i class="fas fa-exclamation-triangle"></i>
+                                              </span>
+                                            </div>
+                                            <!--<p class="help is-danger">This email is invalid</p>-->
+                                          </div>
+                                          
+                                          <div class="field">
+                                            <label class="label">What kind of animal are you?</label>
+                                            <div class="control">
+                                              <div class="select is-center">
+                                                <select>
+                                                  <option>Dog</option>
+                                                  <option>Cat</option>
+                                                  <option>Bird</option>
+                                                  <option>Reptile</option>
+                                                  <option>Small Mammal</option>
+
+
+
+                                                </select>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <!--
+                                          <div class="field">
+                                            <label class="label"></label>
+                                            <div class="control">
+                                              <textarea class="textarea" placeholder="Textarea"></textarea>
+                                            </div>
+                                          </div> -->
+                                          
+                                          <div class="field">
+                                            <div class="control">
+                                              <label class="checkbox">
+                                                <input type="checkbox">
+                                                I agree to the <a href="#">terms and conditions</a>
+                                              </label>
+                                            </div>
+                                          </div>
+                                          
+                                        
                             </section>
                             <footer class="modal-card-foot">
                                 <button class="button is-success">Save changes</button>
@@ -161,26 +217,20 @@
                             </footer>
                         </div>
                     </div>
-
+</div>
                 </h2>
             </div>
         </div>
 
-        <!-- Hero footer: will stick at the bottom 
                 <div class="hero-foot">
                   <nav class="tabs">
                     <div class="container">
-                      <ul>
-                        <li class="is-active"><a>Overview</a></li>
-                        <li><a>Modifiers</a></li>
-                        <li><a>Grid</a></li>
-                        <li><a>Elements</a></li>
-                        <li><a>Components</a></li>
-                        <li><a>Layout</a></li>
-                      </ul>
+                       
+                        <p>Copyright</p>
+                      
                     </div>
                   </nav>
-                </div> -->
+                </div>
     </section>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
@@ -200,6 +250,10 @@
         $("#close-button").click(function () {
             $("#pet-modal").removeClass("is-active");
         });
+
+       
+       
+      
     </script>
 </body>
 

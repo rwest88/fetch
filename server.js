@@ -16,6 +16,9 @@ app.use(session({ secret: 'keyboard cat',resave: true, saveUninitialized:true}))
 app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
 
+//Static Directory
+app.use('/assets', express.static(__dirname + "/assets"))
+
 //For Handlebars
 app.set('views', './app/views')
 app.engine('hbs', exphbs({extname: '.hbs'}));

@@ -1,11 +1,11 @@
-var express    = require('express')
-var app        = express()
-var passport   = require('passport')
-var session    = require('express-session')
-var bodyParser = require('body-parser')
-var env        = require('dotenv').load()
-var exphbs     = require('express-handlebars')
-var path       = require('path');
+var express          = require('express')
+var app              = express()
+var passport         = require('passport')
+var session          = require('express-session')
+var bodyParser       = require('body-parser')
+var env              = require('dotenv').load()
+var exphbs           = require('express-handlebars')
+var path             = require('path');
 
 //For BodyParser
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -31,6 +31,8 @@ app.get('/', function(req, res){
 
 var db = require("./app/models");
 
+var authCheckService = require('./app/services/authCheckService.js');
+
 //Routes
 var authRoute = require('./app/routes/auth.js')(app,passport);
 
@@ -38,8 +40,9 @@ var authRoute = require('./app/routes/auth.js')(app,passport);
 require('./app/config/passport/passport.js')(passport, db.User);
 
 // rest routes
-require('./app/routes/userRoute.js')(app);
-require('./app/routes/petRoute.js')(app);
+require('./app/routes/userRoute.js')(app, db, bodyParser, authCheckService);
+require('./app/routes/petRoute.js')(app, db, bodyParser, authCheckService);
+require('./app/routes/engagementsRoute.js')(app, db, bodyParser, authCheckService);
 
 //Sync Database
 db.sequelize.sync().then(function(){

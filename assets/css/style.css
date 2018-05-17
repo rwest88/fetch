@@ -66,3 +66,19 @@ body {
     text-align: center;  
 
 }
+
+.modal-card {
+    width: 760px; 
+}
+
+.modal-content-width {
+    width: 740px; 
+}
+
+.modal-card-body-padding {
+    padding: 10px; 
+}
+
+.checkbox {
+    padding: 5px; 
+}

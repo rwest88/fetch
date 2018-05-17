@@ -20,9 +20,10 @@ app.use(passport.session()); // persistent login sessions
 app.use('/assets', express.static(__dirname + "/assets"))
 
 //For Handlebars
-app.set('views', './app/views')
-app.engine('hbs', exphbs({extname: '.hbs'}));
+app.set('views', './views');
+app.engine('.hbs', exphbs({defaultLayout: "main", extname: '.hbs'}));
 app.set('view engine', '.hbs');    
+
 
 app.get('/', function(req, res){
   console.log('endpoint hit!');
@@ -38,6 +39,7 @@ var authRoute = require('./app/routes/auth.js')(app,passport);
 require('./app/config/passport/passport.js')(passport, db.User);
 
 // rest routes
+require('./app/routes/htmlRoutes.js')(app);
 require('./app/routes/userRoute.js')(app);
 require('./app/routes/petRoute.js')(app);
 

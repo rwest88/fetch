@@ -7,10 +7,24 @@ module.exports = function (app, db, bodyParser, authCheckService) {
 
     app.get('/api/engagement', authCheckService.isAuthenticated, (req, res) => {
         db.Engagement.findAll({}).then(function (engagements) {
-            res.send(engagements);
+            res.status(200).send(engagements);
         }); 
     });
     
+    app.get('/api/engagement/:engagementId', 
+        authCheckService.isAuthenticated, (req, res) => {
+        
+        db.Engagement.find({
+            where: {
+                id: req.params.engagementId
+            }
+        }).then((response) => {
+            res.status(200).send(response);
+        }).catch((err) => {
+            res.status(500).send('Ooopsie whoopsie: ' + err);
+        });    
+    });
+
     app.post('/api/engagement/pet/:PetId/user/:UserId', 
         authCheckService.isAuthenticated, (req, res) => {
         
@@ -44,4 +58,18 @@ module.exports = function (app, db, bodyParser, authCheckService) {
             res.status(500).send('Ooopsie whoopsie: ' + err);
         }); 
     });
+
+    // app.put('/api/engagement/:engagementId', 
+    //     authCheckService.isAuthenticated, (req, res) => {
+
+
+
+    //     var updatedEngagement = {
+    //         date: req.body.date,
+    //         name: req.body.name,
+    //         address: req.body.address,
+    //         UserId: req.params.UserId,
+    //         PetId: req.params.PetId
+    //     };    
+    // });
 };

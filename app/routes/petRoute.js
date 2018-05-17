@@ -1,8 +1,4 @@
-const db = require('../models');
-const bodyParser = require("body-parser");
-var authCheckService = require('../services/authCheckService.js');
-
-module.exports = function (app) {
+module.exports = function (app, db, bodyParser, authCheckService) {
     app.use(bodyParser.urlencoded({
         extended: true
     }));

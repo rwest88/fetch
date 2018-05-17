@@ -1,3 +1,4 @@
+added this HTML snippet: Untitled 
 <!DOCTYPE html>
 <html lang="en">
 
@@ -61,73 +62,86 @@
                                 <button class="delete" aria-label="close"></button>
                             </header>
                             <section class="modal-card-body">
-                                    <div class="field">
-                                            <label class="label">Name</label>
-                                            <div class="control">
-                                              <input class="input" type="text">
+                                    <div class="field is-horizontal">
+                                            <div class="field-label is-normal">
+                                              <label class="label">Name</label>
                                             </div>
-                                          </div>
-                                          
-                                          
-                                          <div class="field">
-                                            <label class="label">Email</label>
-                                            <div class="control has-icons-left has-icons-right">
-                                              <input class="input" type="email">
-                                              <span class="icon is-small is-left">
-                                                <i class="fas fa-envelope"></i>
-                                              </span>
-                                              <span class="icon is-small is-right">
-                                                <i class="fas fa-exclamation-triangle"></i>
-                                              </span>
-                                            </div>
-                                            <!--<p class="help is-danger">This email is invalid</p>-->
-                                          </div>
-                                          
-                                          <div class="field">
-                                            <label class="label">Type of Pet</label>
-                                            <div class="control">
-                                              <div class="select">
-                                                <select>
-                                                  <option>Dog</option>
-                                                  <option>Cat</option>
-                                                  <option>Bird</option>
-                                                  <option>Reptile</option>
-                                                  <option>Small Mammal</option>
-
-
-
-                                                </select>
+                                            <div class="field-body">
+                                              <div class="field">
+                                                <p class="control is-expanded has-icons-left">
+                                                  <input class="input" type="text" placeholder="First Name">
+                                                  <span class="icon is-small is-left">
+                                                    <i class="fas fa-user"></i>
+                                                  </span>
+                                                </p>
+                                              </div>
+                                              <div class="field">
+                                                <p class="control is-expanded has-icons-left has-icons-right">
+                                                  <input class="input " type="text" placeholder="Last Name" >
+                                                  <span class="icon is-small is-left">
+                                                    <i class="fas fa-envelope"></i>
+                                                  </span>
+                                                  <span class="icon is-small is-right">
+                                                    <i class="fas fa-check"></i>
+                                                  </span>
+                                                </p>
                                               </div>
                                             </div>
                                           </div>
-                                          <!--
-                                          <div class="field">
-                                            <label class="label"></label>
-                                            <div class="control">
-                                              <textarea class="textarea" placeholder="Textarea"></textarea>
-                                            </div>
-                                          </div> -->
                                           
-                                          <div class="field">
-                                            <div class="control">
-                                              <label class="checkbox">
-                                                <input type="checkbox">
-                                                I agree to the <a href="#">terms and conditions</a>
-                                              </label>
+                                    
+                                          
+                                          <div class="field is-horizontal">
+                                            <div class="field-label is-normal">
+                                              <label class="label">Animal Type</label>
+                                            </div>
+                                            <div class="field-body">
+                                              <div class="field is-narrow">
+                                                <div class="control">
+                                                  <div class="select is-fullwidth">
+                                                    <select>
+                                                      <option>Dog</option>
+                                                      <option>Cat</option>
+                                                      <option>Small Mammal</option>
+                                                      <option>Reptile</option>
+                                                      <option>Bird</option>
+                                                    </select>
+                                                  </div>
+                                                </div>
+                                              </div>
                                             </div>
                                           </div>
                                           
-                                       
                                           
-                                          <div class="field is-grouped">
-                                            <div class="control">
-                                              <button class="button is-link">Submit</button>
-                                            </div>
-                                            <div class="control">
-                                              <button class="button is-text">Cancel</button>
+                                          
+                                          <div class="field is-left">
+                                                <label class="label">What are you looking for in a temporary pet?</label>
+                                              </div>
+                                          <div class="field is-horizontal">
+                                            
+                                            <div class="field-body">
+                                              <div class="field">
+                                                <div class="control">
+                                                  <textarea class="textarea" placeholder="Explain how we can help you"></textarea>
+                                                </div>
+                                              </div>
                                             </div>
                                           </div>
 
+                                          <div class="field">
+                                                <div class="control">
+                                                  <label class="checkbox">
+                                                    <input type="checkbox">
+                                                    I agree to the <a href="#">terms and conditions</a>
+                                                  </label>
+                                                </div>
+                                              </div>
+                                          
+                                          <div class="field is-horizontal">
+                                            <div class="field-label">
+                                              <!-- Left empty for spacing -->
+                                            </div>
+                                           
 
                             </section>
                             <footer class="modal-card-foot">
@@ -147,24 +161,25 @@
                             </header>
                             <section class="modal-card-body">
                                     <div class="field">
-                                            <label class="label">My Name</label>
+                                            <label class="label">Pet's Name</label>
                                             <div class="control">
-                                              <input class="input" type="text">
+                                              <input class="input" type="text" placeholder="Text input">
                                             </div>
                                           </div>
 
                                           <div class="field">
-                                            <label class="label">Owner's Name</label>
-                                            <div class="control">
-                                              <input class="input" type="text">
-                                            </div>
-                                          </div>
+                                                <label class="label">Owner's Name</label>
+                                                <div class="control">
+                                                  <input class="input" type="text" placeholder="Text input">
+                                                </div>
+                                              </div>
                                           
+                                        
                                           
                                           <div class="field">
                                             <label class="label">Owner's Email</label>
                                             <div class="control has-icons-left has-icons-right">
-                                              <input class="input" type="email">
+                                              <input class="input " type="email" placeholder="Email input" >
                                               <span class="icon is-small is-left">
                                                 <i class="fas fa-envelope"></i>
                                               </span>
@@ -172,33 +187,54 @@
                                                 <i class="fas fa-exclamation-triangle"></i>
                                               </span>
                                             </div>
-                                            <!--<p class="help is-danger">This email is invalid</p>-->
                                           </div>
                                           
                                           <div class="field">
-                                            <label class="label">What kind of animal are you?</label>
+                                            <label class="label">Type of Animal</label>
                                             <div class="control">
-                                              <div class="select is-center">
+                                              <div class="select">
                                                 <select>
                                                   <option>Dog</option>
                                                   <option>Cat</option>
                                                   <option>Bird</option>
-                                                  <option>Reptile</option>
                                                   <option>Small Mammal</option>
-
-
-
+                                                  <option>Reptile</option>
                                                 </select>
                                               </div>
                                             </div>
                                           </div>
-                                          <!--
+                                          
                                           <div class="field">
-                                            <label class="label"></label>
-                                            <div class="control">
-                                              <textarea class="textarea" placeholder="Textarea"></textarea>
-                                            </div>
-                                          </div> -->
+                                                <label class="label">Describe Yourself (Check All That Apply)</label>
+
+                                                <div class="control">
+                                                  <label class="checkbox">
+                                                    <input type="checkbox">
+                                                    Fiesty</a>
+                                                  </label>
+
+                                                  <label class="checkbox">
+                                                        <input type="checkbox">
+                                                        Cuddly</a>
+                                                      </label>
+
+                                                      <label class="checkbox">
+                                                            <input type="checkbox">
+                                                            Chill</a>
+                                                          </label>
+
+                                                          <label class="checkbox">
+                                                                <input type="checkbox">
+                                                                Great with Kids</a>
+                                                              </label>
+
+                                                              <label class="checkbox">
+                                                                    <input type="checkbox">
+                                                                    Not Sure about Crowds</a>
+                                                                  </label>
+                                                </div>
+                                              </div>
+                                          
                                           
                                           <div class="field">
                                             <div class="control">
@@ -208,9 +244,16 @@
                                               </label>
                                             </div>
                                           </div>
+                                         
+                                          <div class="field is-grouped">
+                                            <div class="control">
+                                              <button class="button is-link">Submit</button>
+                                            </div>
+                                            <div class="control">
+                                              <button class="button is-text">Cancel</button>
+                                            </div>
+                                          </div>
                                           
-                                        
-                            </section>
                             <footer class="modal-card-foot">
                                 <button class="button is-success">Save changes</button>
                                 <button class="button" id="close-button">Cancel</button>

@@ -16,27 +16,33 @@ app.use(session({ secret: 'keyboard cat',resave: true, saveUninitialized:true}))
 app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
 
+//Static Directory
+app.use('/assets', express.static(__dirname + "/assets"))
+
 //For Handlebars
 app.set('views', './app/views')
 app.engine('hbs', exphbs({extname: '.hbs'}));
 app.set('view engine', '.hbs');    
 
 app.get('/', function(req, res){
-    console.log('endpoint hit!');
-    res.sendFile(path.join(__dirname + '/index.html'));
+  console.log('endpoint hit!');
+  res.sendFile(path.join(__dirname + '/index.html'));
 });
 
-//Models
-var models = require("./app/models");
+var db = require("./app/models");
 
 //Routes
 var authRoute = require('./app/routes/auth.js')(app,passport);
 
 //load passport strategies
-require('./app/config/passport/passport.js')(passport,models.user);
+require('./app/config/passport/passport.js')(passport, db.User);
+
+// rest routes
+require('./app/routes/userRoute.js')(app);
+require('./app/routes/petRoute.js')(app);
 
 //Sync Database
-models.sequelize.sync().then(function(){
+db.sequelize.sync().then(function(){
   console.log('Nice! Database looks fine');
 }).catch(function(err){
   console.log(err,"Something went wrong with the Database Update!");

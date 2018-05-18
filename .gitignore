@@ -1,4 +1,8 @@
 node_modules
 .env
 ./app/config/config.json
+<<<<<<< HEAD
 assets/.DS_Store
+=======
+.DS_Store
+>>>>>>> af8c126beede18db231e160750e8d85c4d7f43eb

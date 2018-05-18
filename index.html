@@ -1,0 +1,302 @@
+added this HTML snippet: Untitled 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/bulma.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,700i" rel="stylesheet">
+    <title>Fetch!</title>
+</head>
+
+<body>
+    <section class="hero is-fullheight">
+        <!-- Hero head: will stick at the top -->
+        <div class="hero-head">
+            <nav class="navbar">
+                <div class="container">
+                    <div class="navbar-brand">
+                        <a class="navbar-item">
+                            <img src="assets/images/fetch.png" id="logo" alt="Logo" >
+                        </a>
+                        <span class="navbar-burger burger" data-target="navbarMenuHeroA">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                    </div>
+                    <div id="navbarMenuHeroA" class="navbar-menu">
+                        <div class="navbar-end">
+
+                            <a class="navbar-item">
+                                Available Pets
+                            </a>
+                            <a class="navbar-item" href="signin">
+                            Sign In
+                            </a>
+                                
+                            
+
+                        </div>
+                    </div>
+
+                </div>
+            </nav>
+        </div>
+
+        <!-- Hero content: will be in the middle -->
+        <div class="hero-body">
+            <div class="container has-text-centered">
+
+                <h2 class="subtitle">
+                        <div class="field is-grouped">
+                    <button class="button is-large modal-button people-button" id="people" data-target="modal-ter">Animal Person? Register Here</button>
+                    <div class="modal" id="people-modal">
+                        <div class="modal-background"></div>
+                        <div class="modal-card">
+                            <header class="modal-card-head">
+                                <p class="modal-card-title">Tell Us About Yourself</p>
+                                <button class="delete" aria-label="close"></button>
+                            </header>
+                            <section class="modal-card-body">
+                                    <div class="field is-horizontal">
+                                            <div class="field-label is-normal">
+                                              <label class="label">Name</label>
+                                            </div>
+                                            <div class="field-body">
+                                              <div class="field">
+                                                <p class="control is-expanded has-icons-left">
+                                                  <input class="input" type="text" placeholder="First Name">
+                                                  <span class="icon is-small is-left">
+                                                    <i class="fas fa-user"></i>
+                                                  </span>
+                                                </p>
+                                              </div>
+                                              <div class="field">
+                                                <p class="control is-expanded has-icons-left has-icons-right">
+                                                  <input class="input " type="text" placeholder="Last Name" >
+                                                  <span class="icon is-small is-left">
+                                                    <i class="fas fa-envelope"></i>
+                                                  </span>
+                                                  <span class="icon is-small is-right">
+                                                    <i class="fas fa-check"></i>
+                                                  </span>
+                                                </p>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          
+                                    
+                                          
+                                          <div class="field is-horizontal">
+                                            <div class="field-label is-normal">
+                                              <label class="label">Animal Type</label>
+                                            </div>
+                                            <div class="field-body">
+                                              <div class="field is-narrow">
+                                                <div class="control">
+                                                  <div class="select is-fullwidth">
+                                                    <select>
+                                                      <option>Dog</option>
+                                                      <option>Cat</option>
+                                                      <option>Small Mammal</option>
+                                                      <option>Reptile</option>
+                                                      <option>Bird</option>
+                                                    </select>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          
+                                          
+                                          
+                                          <div class="field is-left">
+                                                <label class="label">What are you looking for in a temporary pet?</label>
+                                              </div>
+                                          <div class="field is-horizontal">
+                                            
+                                            <div class="field-body">
+                                              <div class="field">
+                                                <div class="control">
+                                                  <textarea class="textarea" placeholder="Explain how we can help you"></textarea>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+
+                                          <div class="field">
+                                                <div class="control">
+                                                  <label class="checkbox">
+                                                    <input type="checkbox">
+                                                    I agree to the <a href="#">terms and conditions</a>
+                                                  </label>
+                                                </div>
+                                              </div>
+                                          
+                                          <div class="field is-horizontal">
+                                            <div class="field-label">
+                                              <!-- Left empty for spacing -->
+                                            </div>
+                                           
+
+                            </section>
+                            <footer class="modal-card-foot">
+                                <button class="button is-success">Save changes</button>
+                                <button class="button" id="close-button">Cancel</button>
+                            </footer>
+                        </div>
+                    </div>
+
+                    <button class="button is-large modal-button pet-button" id="pet" data-target="modal-ter">Furry or Scaly? Register Here</button>
+                    <div class="modal" id="pet-modal">
+                        <div class="modal-background"></div>
+                        <div class="modal-card">
+                            <header class="modal-card-head">
+                                <p class="modal-card-title">Register Your Pet</p>
+                                <button class="delete" aria-label="close"></button>
+                            </header>
+                            <section class="modal-card-body">
+                                    <div class="field">
+                                            <label class="label">Pet's Name</label>
+                                            <div class="control">
+                                              <input class="input" type="text" placeholder="Text input">
+                                            </div>
+                                          </div>
+
+                                          <div class="field">
+                                                <label class="label">Owner's Name</label>
+                                                <div class="control">
+                                                  <input class="input" type="text" placeholder="Text input">
+                                                </div>
+                                              </div>
+                                          
+                                        
+                                          
+                                          <div class="field">
+                                            <label class="label">Owner's Email</label>
+                                            <div class="control has-icons-left has-icons-right">
+                                              <input class="input " type="email" placeholder="Email input" >
+                                              <span class="icon is-small is-left">
+                                                <i class="fas fa-envelope"></i>
+                                              </span>
+                                              <span class="icon is-small is-right">
+                                                <i class="fas fa-exclamation-triangle"></i>
+                                              </span>
+                                            </div>
+                                          </div>
+                                          
+                                          <div class="field">
+                                            <label class="label">Type of Animal</label>
+                                            <div class="control">
+                                              <div class="select">
+                                                <select>
+                                                  <option>Dog</option>
+                                                  <option>Cat</option>
+                                                  <option>Bird</option>
+                                                  <option>Small Mammal</option>
+                                                  <option>Reptile</option>
+                                                </select>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          
+                                          <div class="field">
+                                                <label class="label">Describe Yourself (Check All That Apply)</label>
+
+                                                <div class="control">
+                                                  <label class="checkbox">
+                                                    <input type="checkbox">
+                                                    Fiesty</a>
+                                                  </label>
+
+                                                  <label class="checkbox">
+                                                        <input type="checkbox">
+                                                        Cuddly</a>
+                                                      </label>
+
+                                                      <label class="checkbox">
+                                                            <input type="checkbox">
+                                                            Chill</a>
+                                                          </label>
+
+                                                          <label class="checkbox">
+                                                                <input type="checkbox">
+                                                                Great with Kids</a>
+                                                              </label>
+
+                                                              <label class="checkbox">
+                                                                    <input type="checkbox">
+                                                                    Not Sure about Crowds</a>
+                                                                  </label>
+                                                </div>
+                                              </div>
+                                          
+                                          
+                                          <div class="field">
+                                            <div class="control">
+                                              <label class="checkbox">
+                                                <input type="checkbox">
+                                                I agree to the <a href="#">terms and conditions</a>
+                                              </label>
+                                            </div>
+                                          </div>
+                                         
+                                          <div class="field is-grouped">
+                                            <div class="control">
+                                              <button class="button is-link">Submit</button>
+                                            </div>
+                                            <div class="control">
+                                              <button class="button is-text">Cancel</button>
+                                            </div>
+                                          </div>
+                                          
+                            <footer class="modal-card-foot">
+                                <button class="button is-success">Save changes</button>
+                                <button class="button" id="close-button">Cancel</button>
+                            </footer>
+                        </div>
+                    </div>
+</div>
+                </h2>
+            </div>
+        </div>
+
+                <div class="hero-foot">
+                  <nav class="tabs">
+                    <div class="container">
+                       
+                        <p>Copyright</p>
+                      
+                    </div>
+                  </nav>
+                </div>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script>
+        $("#people").click(function () {
+            $("#people-modal").addClass("is-active");
+        });
+
+        $("#close-button").click(function () {
+            $("#people-modal").removeClass("is-active");
+        });
+
+        $("#pet").click(function () {
+            $("#pet-modal").addClass("is-active");
+        });
+
+        $("#close-button").click(function () {
+            $("#pet-modal").removeClass("is-active");
+        });
+
+       
+      
+    </script>
+</body>
+
+</html>

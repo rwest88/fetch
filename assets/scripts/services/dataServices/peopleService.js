@@ -1,6 +1,9 @@
 var peopleService = (function () {
   'use strict';
-  $(document).ready(function () {
-    console.log("woof");
-  });
+  
+  return {
+    getAll: function () {
+      return $.get("/api/user");
+    }
+  };
 })();

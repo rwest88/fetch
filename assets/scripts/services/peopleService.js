@@ -1,10 +1,6 @@
 (function () {
-    'use strict';
-    $(document).ready(function () {
-        
-  
-      console.log("woof");
-  
-  
-    });
-  })();
+  'use strict';
+  $(document).ready(function () {
+    console.log("woof");
+  });
+})();

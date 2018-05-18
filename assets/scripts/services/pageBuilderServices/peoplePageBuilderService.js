@@ -21,6 +21,9 @@ var peoplePageBuilderService = (function ($, peopleService) {
                       <small>${peopleData[i].about}</small>
                     </p>
                   </div>
+                  <div class="is-pulled-right">
+                    <a class="button" href="/profile/user/${peopleData[i].id}">View Profile</a>
+                  </div>
                   <nav class="level is-mobile">
                     <div class="level-left">
                       <a class="level-item" aria-label="info">

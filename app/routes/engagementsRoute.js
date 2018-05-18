@@ -11,6 +11,19 @@ module.exports = function (app, db, bodyParser, authCheckService) {
         }); 
     });
     
+    app.get('/api/engagement/pet/:petId', 
+        authCheckService.isAuthenticated, 
+        (req, res) => {
+
+        db.Engagement.findAll({
+            where: {
+                PetId: req.params.petId
+            }
+        }).then(function (engagements) {
+            res.status(200).send(engagements);
+        });
+    });
+
     app.get('/api/engagement/:engagementId', 
         authCheckService.isAuthenticated, (req, res) => {
         

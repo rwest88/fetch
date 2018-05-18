@@ -11,7 +11,6 @@ module.exports = function (app, db, bodyParser, authCheckService, User) {
         }); 
     });
     
-
     app.get('/api/pet/user', authCheckService.isAuthenticated, (req, res) => {
         db.Pet.findAll({
             include: [db.User]

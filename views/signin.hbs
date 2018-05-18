@@ -1,16 +1,25 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<body>
-<form id="signin" name="signin" method="post" action="signin">
-  <label for="email">Email Address</label>
-  <input class="text" name="email" type="text" />
-  <label for="password">Password</label>
-  <input name="password" type="password" />
-  <input class="btn" type="submit" value="Sign In" />
-</form>
-
-</body>
-</html>
+<section class="hero is-success is-fullheight">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <div class="column is-4 is-offset-4">
+        <h3 class="title has-text-grey">Login</h3>
+        <p class="subtitle has-text-grey">Please login to proceed.</p>
+        <div class="box">
+          <form id="signin" name="signin" method="post" action="signin">
+            <div class="field">
+              <div class="control">
+                <input class="input is-large" name="email" type="email" placeholder="Your Email" autofocus="">
+              </div>
+            </div>
+            <div class="field">
+              <div class="control">
+                <input class="input is-large" name="password" type="password" placeholder="Your Password">
+              </div>
+            </div>
+            <button class="button is-block is-info is-large is-fullwidth">Login</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

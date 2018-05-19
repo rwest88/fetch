@@ -89,3 +89,20 @@ h1 {
 .checkbox {
     padding: 5px; 
 }
+
+.has-text-primary  {
+    color: #507050 !important;
+}
+
+.is-primary {
+    background-color: #507050 !important;
+}
+
+.navbar-item {
+    color: #ffffff;
+}
+
+a.navbar-item:hover, a.navbar-item.is-active, .navbar-link:hover, .navbar-link.is-active {
+    background-color: #507050;
+    color: #ffffff;
+}

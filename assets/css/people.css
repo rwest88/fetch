@@ -20,3 +20,32 @@ a.navbar-item:hover, a.navbar-item.is-active, .navbar-link:hover, .navbar-link.i
 .section {
     padding: 1.5rem !important;
 }
+
+.tile.is-parent {
+   padding: 0 !important;
+}
+
+.level-left, .is-4, .content {
+    margin-left: 20px !important;
+}
+
+#cardSubtitle {
+    margin-top: -10px !important;
+}
+
+
+.subtitle {
+    margin-top: -40px !important;
+}
+
+#ammenities {
+    margin: 0 0 10px;
+}
+
+.content {
+    color: black;
+}
+
+.white {
+    color: white;
+}

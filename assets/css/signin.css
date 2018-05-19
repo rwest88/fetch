@@ -1,18 +1,48 @@
 body {
-    font-family: 'Montserrat', sans-serif;
-
+  font-family: 'Montserrat', sans-serif;
 }
 
 .hero {
-    background-image: url("Cat.jpg");
-    background-position: center center;
-    background-repeat:  no-repeat;
-    background-attachment: fixed;
-    background-size: cover; 
-    background-color: #999;
-
+  background-image: url('Cat.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #999;
 }
 
 .box {
-    background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.has-text-primary {
+  color: #507050 !important;
+}
+
+.is-primary {
+  background-color: #507050 !important;
+}
+
+.input:hover,
+.textarea.is-hovered,
+.textarea:hover {
+  border-color: #507050;
+}
+
+.input:-webkit-autofill,
+.textarea:-webkit-autofill,
+.select:-webkit-autofill {
+  background-color: #d3d3d3 !important;
+}
+
+.input.is-active,
+.input.is-focused,
+.input:active,
+.input:focus,
+.textarea.is-active,
+.textarea.is-focused,
+.textarea:active,
+.textarea:focus {
+  border-color: #507050;
+  box-shadow: 0 0 0 0.125em #507050;
 }

@@ -2,17 +2,62 @@ body {
     background-color:#DCDCDC;
 }
 
-.has-text-primary {
+.has-text-primary  {
     color: #507050 !important;
 }
 
+.is-primary {
+    background-color: #507050 !important;
+}
 
 .navbar-item {
     color: #507050;
 }
 
 a.navbar-item:hover, a.navbar-item.is-active, .navbar-link:hover, .navbar-link.is-active {
-    background-color: #fafafa;
+    background-color: #507050;
+    color: #ffffff;
+}
+
+
+#profile {
+    max-width: 1080px !important;
+    margin-top: 100px;
+}
+
+.icon {
+    margin-left: 5px;
+}
+
+.svg-inline--fa {
+    display: inline-block;
+    font-size: inherit;
+    height: 1em; 
+    overflow: visible;
+    vertical-align: -.125em;
+}
+
+.svg-inline--fa.fa-w-12, 
+.svg-inline--fa.fa-w-14 {
+    width: 1em;
+}
+
+p {
+    margin-left: 5px;
+}
+
+
+#ammenities {
+    background-color: #507050;
+    padding: 20px;
+}
+
+.content {
+    padding-right: 20px;
+}
+ 
+.tile.is-7 {
+    flex: none;
     color: #507050;
 }
 
@@ -20,3 +65,13 @@ a.navbar-item:hover, a.navbar-item.is-active, .navbar-link:hover, .navbar-link.i
 .section {
     padding: 1.5rem !important;
 }
+
+.fc-toolbar.fc-header-toolbar {
+    margin-top: 2em;
+}
+
+
+.card {
+    height: 400px;
+}
+

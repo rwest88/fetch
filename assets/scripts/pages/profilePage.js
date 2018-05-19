@@ -6,7 +6,11 @@ $(document).ready(function () {
   });
 
   $("#createEngagementButton").on("click", function(){
-    console.log("create engaement button clicked");
+    console.log("create engagement button clicked");
     $("#addEngagementModal").addClass("is-active");
+  });
+  $("#close-button").on("click", function(){
+    //console.log("create engagement button clicked");
+    $("#addEngagementModal").removeClass("is-active");
   });
 });

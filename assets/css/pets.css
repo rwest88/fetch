@@ -21,12 +21,8 @@ a.navbar-item:hover, a.navbar-item.is-active, .navbar-link:hover, .navbar-link.i
 
 
 #profile {
-    max-width: 900px !important;
+    max-width: 1080px !important;
     margin-top: 100px;
-}
-
-.subtitle {
-    margin-top: -30px !important;
 }
 
 .icon {
@@ -52,16 +48,16 @@ p {
 
 
 #ammenities {
-    margin-top: 40px;
-    background-color: #f8f8f8;
+    background-color: #507050;
     padding: 20px;
-    border-radius: 5px; 
+}
+
+.content {
+    padding-right: 20px;
 }
  
 .tile.is-7 {
     flex: none;
-    width: 66% !important;
-    background-color: #fafafa;
     color: #507050;
 }
 
@@ -69,3 +65,13 @@ p {
 .section {
     padding: 1.5rem !important;
 }
+
+.fc-toolbar.fc-header-toolbar {
+    margin-top: 2em;
+}
+
+
+.card {
+    height: 400px;
+}
+

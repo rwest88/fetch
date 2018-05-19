@@ -1,3 +1,6 @@
+body {
+    background-color:#DCDCDC;
+}
 
 .has-text-primary  {
     color: #507050 !important;
@@ -58,4 +61,11 @@ p {
 .tile.is-7 {
     flex: none;
     width: 66% !important;
+    background-color: #fafafa;
+    color: #507050;
+}
+
+
+.section {
+    padding: 1.5rem !important;
 }

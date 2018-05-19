@@ -1,8 +1,4 @@
-const db = require('../models');
-const bodyParser = require("body-parser");
-const authCheckService = require('../services/authCheckService.js');
-
-module.exports = function (app) {
+module.exports = function (app, db, bodyParser, authCheckService) {
     app.use(bodyParser.urlencoded({
         extended: true
     }));
@@ -13,5 +9,18 @@ module.exports = function (app) {
         db.User.findAll({}).then(function (users) {
             res.send(users);
         }); 
-    });    
+    });  
+    
+    app.get('/api/user/pet/:petId', 
+        authCheckService.isAuthenticated, 
+        (req, res) => {
+
+        db.User.findAll({
+            where: {
+                id: req.params.petId 
+            }  
+        }).then(function (user) {
+            res.send(user);
+        });
+    });
 };

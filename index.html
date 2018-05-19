@@ -1,58 +1,65 @@
-added this HTML snippet: Untitled 
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="assets/css/bulma.css" />
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,700i" rel="stylesheet">
-    <title>Fetch!</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="assets/css/bulma.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Da" rel="stylesheet">
+  <title>Fetch!</title>
 </head>
 
 <body>
-    <section class="hero is-fullheight">
-        <!-- Hero head: will stick at the top -->
-        <div class="hero-head">
-            <nav class="navbar">
-                <div class="container">
-                    <div class="navbar-brand">
-                        <a class="navbar-item">
-                            <img src="assets/images/fetch.png" id="logo" alt="Logo" >
-                        </a>
-                        <span class="navbar-burger burger" data-target="navbarMenuHeroA">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </span>
-                    </div>
-                    <div id="navbarMenuHeroA" class="navbar-menu">
-                        <div class="navbar-end">
+  <section class="hero is-fullheight">
+    <!-- Hero head: will stick at the top -->
+    <div class="hero-head">
+      <nav class="navbar">
+        <div class="container">
+          <div class="navbar-brand">
+            <a class="navbar-item">
+              <img src="assets/images/fetch.png" id="logo" alt="Logo">
+            </a>
+            <span class="navbar-burger burger" data-target="navbarMenuHeroA">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </div>
+          <div id="navbarMenuHeroA" class="navbar-menu">
+            <div class="navbar-end">
+              <a class="navbar-item" href="signup">
+                Create an Account
+              </a>
+              <a class="navbar-item">
+                Available Pets
+              </a>
+              <a class="navbar-item" href="signin">
+                Log In
+              </a>
 
-                            <a class="navbar-item">
-                                Available Pets
-                            </a>
-                            <a class="navbar-item" href="signin">
-                            Sign In
-                            </a>
-                                
-                            
 
-                        </div>
-                    </div>
 
-                </div>
-            </nav>
+            </div>
+          </div>
+
         </div>
+      </nav>
+    </div>
 
-        <!-- Hero content: will be in the middle -->
-        <div class="hero-body">
-            <div class="container has-text-centered">
-
-                <h2 class="subtitle">
-                        <div class="field is-grouped">
+    <!-- Hero content: will be in the middle -->
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <a href="/signup">
+          <img src="assets/css/fetch!.png" alt="Mountain View" href="/signup">
+        </a>
+        <h1> because sometimes you </br> need a cuddle buddy
+          <i>quick</i>
+        </h1>
+        <h2 class="subtitle">
+          <!--      <div class="field is-grouped">
                     <button class="button is-large modal-button people-button" id="people" data-target="modal-ter">Animal Person? Register Here</button>
                     <div class="modal" id="people-modal">
                         <div class="modal-background"></div>
@@ -140,12 +147,12 @@ added this HTML snippet: Untitled
                                           <div class="field is-horizontal">
                                             <div class="field-label">
                                               <!-- Left empty for spacing -->
-                                            </div>
+          <!--     </div> 
                                            
 
                             </section>
                             <footer class="modal-card-foot">
-                                <button class="button is-success">Save changes</button>
+                                <button class="button is-success" href="signup">Submit</button>
                                 <button class="button" id="close-button">Cancel</button>
                             </footer>
                         </div>
@@ -245,58 +252,46 @@ added this HTML snippet: Untitled
                                             </div>
                                           </div>
                                          
-                                          <div class="field is-grouped">
-                                            <div class="control">
-                                              <button class="button is-link">Submit</button>
-                                            </div>
-                                            <div class="control">
-                                              <button class="button is-text">Cancel</button>
-                                            </div>
-                                          </div>
-                                          
+                                        
                             <footer class="modal-card-foot">
-                                <button class="button is-success">Save changes</button>
-                                <button class="button" id="close-button">Cancel</button>
+                                <button class="button is-success" href="signup">Submit</button>
+                                <button class="button" id="close">Cancel</button>
                             </footer>
                         </div>
-                    </div>
-</div>
-                </h2>
-            </div>
+                    </div> -->
+      </div>
+      </h2>
+    </div>
+    </div>
+
+    <div class="hero-foot">
+      <nav class="tabs">
+        <div class="container">
+
+          <p>Copyright</p>
+
         </div>
+      </nav>
+    </div>
+  </section>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    $("#people").click(function () {
+      $("#people-modal").addClass("is-active");
+    });
 
-                <div class="hero-foot">
-                  <nav class="tabs">
-                    <div class="container">
-                       
-                        <p>Copyright</p>
-                      
-                    </div>
-                  </nav>
-                </div>
-    </section>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    $("#close-button").click(function () {
+      $("#people-modal").removeClass("is-active");
+    });
 
-    <script>
-        $("#people").click(function () {
-            $("#people-modal").addClass("is-active");
-        });
+    $("#pet").click(function () {
+      $("#pet-modal").addClass("is-active");
+    });
 
-        $("#close-button").click(function () {
-            $("#people-modal").removeClass("is-active");
-        });
-
-        $("#pet").click(function () {
-            $("#pet-modal").addClass("is-active");
-        });
-
-        $("#close-button").click(function () {
-            $("#pet-modal").removeClass("is-active");
-        });
-
-       
-      
-    </script>
+    $("#close").click(function () {
+      $("#pet-modal").removeClass("is-active");
+    });
+  </script>
 </body>
 
 </html>

@@ -1,8 +1,4 @@
-const db = require('../models');
-const bodyParser = require("body-parser");
-var authCheckService = require('../services/authCheckService.js');
-
-module.exports = function (app) {
+module.exports = function (app, db, bodyParser, authCheckService, User) {
     app.use(bodyParser.urlencoded({
         extended: true
     }));
@@ -15,6 +11,14 @@ module.exports = function (app) {
         }); 
     });
     
+    app.get('/api/pet/user', authCheckService.isAuthenticated, (req, res) => {
+        db.Pet.findAll({
+            include: [db.User]
+        }).then(function (pets) {
+            res.send(pets);
+        }); 
+    });
+
     app.post('/api/pet', authCheckService.isAuthenticated, (req, res) => {
         console.log("request"+JSON.stringify(req.body));
         

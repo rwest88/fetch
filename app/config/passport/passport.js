@@ -23,9 +23,7 @@
           done(user.errors,null);
         }
       });
-
   });
-
 
   passport.use('local-signup', new LocalStrategy(
 

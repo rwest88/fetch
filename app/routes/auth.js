@@ -12,18 +12,15 @@ module.exports = function(app, passport) {
 
     app.get('/dashboard', authCheckService.isAuthenticated, authController.dashboard);
 
+    app.get('/people', authCheckService.isAuthenticated, authController.people);
+
+    app.get('/pets', authCheckService.isAuthenticated, authController.pets);
+
     app.get('/logout',authController.logout);
 
     app.post('/signin', passport.authenticate('local-signin',  
         { successRedirect: '/dashboard', failureRedirect: '/signin'}
     ));
-
-    // function isLoggedIn(req, res, next) {
-    //     if (req.isAuthenticated())
-    //         return next();
-
-    //     res.redirect('/signin');
-    // }
 }
 
 

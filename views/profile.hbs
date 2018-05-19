@@ -1,5 +1,38 @@
+<link rel="stylesheet" href="../../assets/css/people.css">
+<link rel="stylesheet" href="../../assets/css/pets.css">
+
+
+    <!-- Hero head: will stick at the top -->
+    <div class="hero-head">
+        <nav class="navbar">
+            <div class="container">
+                <div class="navbar-brand">
+                    <a class="navbar-item">
+              <img src="/assets/images/fetch_green.png" id="logo" alt="Logo">
+                    </a>
+                    <span class="navbar-burger burger" data-target="navbarMenuHeroA">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                </div>
+                <div id="navbarMenuHeroA" class="navbar-menu">
+                    <div class="navbar-end">
+                        <a href="/dashboard" class="navbar-item">
+                            Dashboard
+                        </a>
+                        <a href="/pets" class="navbar-item">
+                            Pets
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
 <div class="hero-body">
     {{#if human}}
+    <div id="human-profile">
     <div id="pet-profile">
         <section>
             <div class="container" id="profile">
@@ -22,7 +55,7 @@
 
                                             <div class="tile is-child">
                                                 <figure class="image is-128x128">
-                                                    <img src="assets/images/dogIcon.png" alt="Image">
+                                                    <img src="/assets/images/dogIcon.png" alt="Image">
                                                 </figure>
                                             </div>
                                         </div>
@@ -90,26 +123,15 @@
                                     <p class="subtitle" id="cardSubtitle">
                                         Fetch your time here.
                                     </p>
-                                    <div class="field">
-                                        <label class="label">Email</label>
-                                        <div class="control">
-                                            <input class="input" type="text" placeholder="Email address">
-                                        </div>
                                     </div>
-                                    <div class="field">
-                                        <label class="label">Password</label>
-                                        <div class="control">
-                                            <input class="input" type="email" placeholder="My password">
-                                        </div>
-                                    </div>
-                                    <h6 class="subtitle is-6 has-text-centered">or</h6>
+                                   
+                                    <h6 class="subtitle is-6 has-text-centered"></h6>
                                     <div class="has-text-centered">
-                                        <a class="button is-primary">Book Now</a>
-                                    </div>
+                            <button id="createEngagementButton" class="button" aria-label="close">Book Now</button>                                    </div>
                                 </div>
                                 <footer class="card-footer">
                             <span class="image">
-                              <img src="../assets/images/fetch.png" id="logo" alt="Logo">
+                              <img src="/assets/images/fetch_green.png" id="logo" alt="Logo">
                               </span>
                                 </footer>
                             </div>
@@ -128,7 +150,7 @@
     {{else}}
     <div id="pet-profile">
         <section>
-            <div class="container" id="profile">
+            <div class="container is-centered" id="profile">
 
                 <div class="tile is-ancesetor">
 
@@ -208,27 +230,31 @@
                                     <p class="subtitle">
                                         Fetch your time here.
                                     </p>
-                                    <div class="field">
-                                        <label class="label">Email</label>
-                                        <div class="control">
-                                            <input class="input" type="text" placeholder="Email address">
-                                        </div>
-                                    </div>
-                                    <div class="field">
-                                        <label class="label">Password</label>
-                                        <div class="control">
-                                            <input class="input" type="email" placeholder="My password">
-                                        </div>
-                                    </div>
+                                    <form>
+                                        <div class="field">
+  <label class="label">Name</label>
+  <div class="control">
+    <input class="input" type="text" placeholder="e.g Alex Smith">
+  </div>
+</div>
+
+<div class="field">
+  <label class="label">Email</label>
+  <div class="control">
+    <input class="input" type="email" placeholder="e.g. alexsmith@gmail.com">
+  </div>
+</div>
+                                    </form>
+                                    
                                     <h6 class="subtitle is-6 has-text-centered">or</h6>
                                     <div class="has-text-centered">
                                         <a class="button is-primary">Book Now</a>
                                     </div>
                                 </div>
                                 <footer class="card-footer">
-                                        <span class="image">
-                                            <img src="assets/images/fetch.png" id="logo" alt="Logo">
-                                        </span>
+                                        {{!-- <span class="image">
+                                            <img src="../assets/images/fetch_green.png">
+                                        </span> --}}
                                 </footer>
                             </div>
 
@@ -247,4 +273,19 @@
     <div id="calendar"></div>
 </div>
 
-<script type="text/javascript" src="../../assets/scripts/pages/profilePage.js"></script>
+<div id="addEngagementModal" class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">Modal title</p>
+      <button class="delete" aria-label="close"></button>
+    </header>
+    <section class="modal-card-body">
+      <!-- Content ... -->
+    </section>
+    <footer class="modal-card-foot">
+      <button class="button is-success">Save changes</button>
+      <button class="button" id="close-button">Cancel</button>
+    </footer>
+  </div>
+</div>

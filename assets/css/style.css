@@ -106,3 +106,7 @@ a.navbar-item:hover, a.navbar-item.is-active, .navbar-link:hover, .navbar-link.i
     background-color: #507050;
     color: #ffffff;
 }
+
+#sub {
+    color: white; 
+}

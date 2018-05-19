@@ -12,7 +12,6 @@ module.exports = function(sequelize, DataTypes) {
       about: {type: DataTypes.TEXT, allowNull: false},
       type: {type: DataTypes.STRING, allowNull: false},
       breed: {type: DataTypes.STRING, allowNull: true},
-      owner: {type: DataTypes.STRING}
     }, {
       timestamps: false
     });

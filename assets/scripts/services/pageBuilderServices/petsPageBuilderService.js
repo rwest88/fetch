@@ -1,4 +1,4 @@
-var petsPageBuilderService = (function ($, petsService, peopleService) {
+var petsPageBuilderService = (function ($, petsService) {
   'use strict';
 
   return {
@@ -47,4 +47,4 @@ var petsPageBuilderService = (function ($, petsService, peopleService) {
       });
     }
   };
-})($, petsService, peopleService);
+})($, petsService);

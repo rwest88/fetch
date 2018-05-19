@@ -1,3 +1,5 @@
 $(document).ready(function () {
-  peoplePageBuilderService.buildPage();            
+  'use strict';
+  
+  peoplePageBuilderService.buildPage();
 });

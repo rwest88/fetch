@@ -1,0 +1,38 @@
+body {
+    background-image: url();
+    background-color:#DCDCDC;
+}
+
+.has-text-primary {
+    color: #507050 !important;
+}
+
+.navbar-item {
+    color: white;
+}
+
+a.navbar-item:hover, a.navbar-item.is-active, .navbar-link:hover, .navbar-link.is-active {
+    background-color: #fafafa;
+    color: #507050;
+}
+
+#dashboard {
+    background: rgba(255, 255, 255, 0.8)
+}
+
+
+.is-large {
+    background-color: #507050;
+    color: white; 
+    padding: 0px, 0px, 0px, 10px; 
+    margin-left: 20%; 
+}
+
+h1, h3 {
+    color: black; 
+    justify-content: center;
+}
+
+.column {
+    justify-content: center; 
+}

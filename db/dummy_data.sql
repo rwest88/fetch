@@ -23,8 +23,8 @@ INSERT INTO Pets (name, about, type, breed, UserId)
     VALUES ("Birdie", "A flighty little brightly colored buddy", "Bird", "Songbird", 4);
 
 INSERT INTO Engagements (name, date, address, UserId, PetId)
-    VALUES ("Walk with Robert Plant", "2018-05-18 13:17:17", "123 Main Street, Richmond, VA 23229",2,1)
+    VALUES ("Walk with Robert Plant", "2018-05-18 13:17:17", "123 Main Street, Richmond, VA 23229",2,1);
 INSERT INTO Engagements (name, date, address, UserId, PetId)
-    VALUES ("Afternoon with John Paul Jones", "2018-05-11 12:00:00", "456 Oak Lane, Scranton, PA", 3, 4)
+    VALUES ("Afternoon with John Paul Jones", "2018-05-11 12:00:00", "456 Oak Lane, Scranton, PA", 3, 4);
 INSERT INTO Engagements (name, date, address, UserId, PetId)
-    VALUES ("Hike with Jimmy Page", "2018-05-05 10:34:44", "The Woods, Pawnee, Indiana",1,2)
+    VALUES ("Hike with Jimmy Page", "2018-05-05 10:34:44", "The Woods, Pawnee, Indiana",1,2);

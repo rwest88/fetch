@@ -1,11 +1,11 @@
 body {
+    background-image: url();
     background-color:#DCDCDC;
 }
 
 .has-text-primary {
     color: #507050 !important;
 }
-
 
 .navbar-item {
     color: #507050;
@@ -49,3 +49,9 @@ a.navbar-item:hover, a.navbar-item.is-active, .navbar-link:hover, .navbar-link.i
 .white {
     color: white;
 }
+
+#dashboard {
+    background-color:#DCDCDC;
+
+}
+

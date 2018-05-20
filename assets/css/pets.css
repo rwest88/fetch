@@ -72,6 +72,15 @@ p {
 
 
 .card {
-    height: 400px;
+    height: 500px;
+}
+
+.field {
+    padding: 3px; 
+}
+
+#bookbtn {
+    padding: 10px; 
+    align-content: center;
 }
 

@@ -5,23 +5,62 @@
 
 <div class="hero-body" id="dashboard">
     <div class="container">
-        
-            <h1>Your fetch!</h1>
-            <h3>Keep up with your latest fetches here</h3>
-            <hr>
-       
-<br>
-<br>
+
+        <h1>Your fetch!</h1>
+        <h3>Keep up with your latest fetches here</h3>
+        <hr>
+
+        <br>
+        <br>
         <div class="columns is-centered is-multiline">
             <div class="column is-centered">
-                <p class="buttons">
-                    <a class="button is-large" >
+                <p class="buttons" id="add">
+                    <a class="button is-large">
                         <span class="icon is-large">
                             <i class="fas fa-plus"></i>
                         </span>
                         <span>Add a Pet</span>
                     </a>
                 </p>
+                <div class="modal">
+                    <div class="modal-background"></div>
+                    <div class="modal-card">
+                        <header class="modal-card-head">
+                            <p class="modal-card-title">Add a Pet</p>
+                            <button class="delete" aria-label="close"></button>
+                        </header>
+                        <section class="modal-card-body">
+                            <div class="field">
+                                <label class="label">Name</label>
+                                <div class="control">
+                                    <input class="input" type="text" placeholder="e.g Alex Smith">
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label class="label">Animal Type</label>
+                                <div class="control">
+                                    <input class="input" type="text" placeholder="e.g Dog, Cat">
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label class="label">Breed</label>
+                                <div class="control">
+                                    <input class="input" type="text" placeholder="e.g. Pug, Iguana">
+                                </div>
+                            </div>
+                              <div class="field">
+                                <label class="label">About</label>
+                                <div class="control">
+                                    <textarea class="textarea" placeholder="Tell us a little about yourself"></textarea>
+                                </div>
+                            </div>
+                        </section>
+                        <footer class="modal-card-foot">
+                            <button class="button is-primary">Submit</button>
+                            <button class="button" id="close">Cancel</button>
+                        </footer>
+                    </div>
+                </div>
             </div>
             <div class="column">
                 <p class="buttons">
@@ -43,9 +82,24 @@
                     </a>
                 </p>
             </div>
-            </div>
-            <br>
-<div id="calendar"></div>
+        </div>
+        <br>
+        <div id="calendar"></div>
 
     </div>
 </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    $("#add").click(function () {
+        $(".modal").addClass("is-active");
+    });
+
+    $("#close").click(function () {
+        $(".modal").removeClass("is-active");
+    });
+
+    $(".delete").click(function () {
+        $(".modal").removeClass("is-active");
+    })
+</script>

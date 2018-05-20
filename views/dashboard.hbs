@@ -1,8 +1,4 @@
 <link rel="stylesheet" href="../assets/css/dashboard.css">
-
-
-
-
 <div class="hero-body" id="dashboard">
     <div class="container">
         
@@ -15,7 +11,7 @@
         <div class="columns is-centered is-multiline">
             <div class="column is-centered">
                 <p class="buttons">
-                    <a class="button is-large" >
+                    <a id="addPetBtn" class="button is-large" >
                         <span class="icon is-large">
                             <i class="fas fa-plus"></i>
                         </span>
@@ -45,7 +41,22 @@
             </div>
             </div>
             <br>
-<div id="calendar"></div>
-
+        <div id="calendar"></div>
     </div>
+</div>
+<div id="addPetModal" class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">Modal title</p>
+      <button class="delete" aria-label="close"></button>
+    </header>
+    <section class="modal-card-body">
+      <!-- Content ... -->
+    </section>
+    <footer class="modal-card-foot">
+      <button class="button is-success">Save changes</button>
+      <button class="button">Cancel</button>
+    </footer>
+  </div>
 </div>

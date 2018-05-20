@@ -30,6 +30,8 @@
     {           
       usernameField : 'email',
       passwordField : 'password',
+      usernameField : 'username',
+      aboutField : 'about',
       passReqToCallback : true // allows us to pass back the entire request to the callback
     },
 
@@ -51,10 +53,13 @@
       {
         var userPassword = generateHash(password);
         var data =
-        { email:email,
-        password:userPassword,
-        firstname: req.body.firstname,
-        lastname: req.body.lastname
+        { 
+          email: email,
+          password: userPassword,
+          firstname: req.body.firstname,
+          lastname: req.body.lastname,
+          username: req.body.username,
+          about: req.body.about
         };
 
 

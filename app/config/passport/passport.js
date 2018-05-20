@@ -1,4 +1,3 @@
-
 //load bcrypt
 var bCrypt = require('bcrypt-nodejs');
 
@@ -54,9 +53,7 @@ passport.use('local-signup', new LocalStrategy(
       { email:email,
       password:userPassword,
       firstname: req.body.firstname,
-      lastname: req.body.lastname,
-      username: req.body.username,
-      about: req.body.about
+      lastname: req.body.lastname
       };
 
 

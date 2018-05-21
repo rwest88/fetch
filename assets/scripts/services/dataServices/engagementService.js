@@ -10,7 +10,7 @@ var engagementService = (function ($) {
         return $.ajax({
           method: 'POST',
           url: '/api/engagement',
-          body: data
+          data: data
         });
       }
     };

@@ -1,7 +1,7 @@
-var currentUser = null;
-
 (function ($) {
     'use strict';
+
+    var currentUser = null;
 
     function createPet(pet) {
       return $.ajax({
@@ -27,21 +27,26 @@ var currentUser = null;
     });
 
     $('#save').click( () => {
-      getCurrentUser().then((currentUser) => {
-        var pet = {
-          name: $('#namefield').val().trim(),
-          type: $('#typefield').val().trim(),
-          breed: $('#breedfield').val().trim(),
-          about: $('#aboutfield').val().trim(),
-          UserId: currentUser.id
-        };
+      var pet = {
+        name: $('#namefield').val().trim(),
+        type: $('#typefield').val().trim(),
+        breed: $('#breedfield').val().trim(),
+        about: $('#aboutfield').val().trim(),
+        UserId: currentUser.id
+      };
 
-        createPet(pet).done((data) => {
-          console.log(data);
-        });
-        
-        $('#addPetModal').removeClass('is-active');
+      createPet(pet).done((data) => {
+        console.log(data);
       });
+      
+      $('#addPetModal').removeClass('is-active');
     });
 
+    function init() {
+      getCurrentUser().then((currentUserData) => {
+        currentUser = currentUserData;
+      });
+    }
+
+    init();
 })($);

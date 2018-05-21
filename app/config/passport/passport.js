@@ -64,7 +64,7 @@ passport.use('local-signup', new LocalStrategy(
         }
 
         if(newUser){
-          currentUser = newUser;
+          currentUser.setCurrentUser(newUser);
           return done(null,newUser);
         }
 
@@ -115,8 +115,8 @@ function(req, email, password, done) {
     }
 
     var userinfo = user.get();
-
-    return done(null,userinfo);
+    currentUser.setCurrentUser(userinfo);
+    return done(null, userinfo);
 
   }).catch(function(err){
 

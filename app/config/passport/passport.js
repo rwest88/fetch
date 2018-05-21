@@ -1,5 +1,6 @@
 //load bcrypt
 var bCrypt = require('bcrypt-nodejs');
+var currentUser = require('../currentUser.js');
 
 module.exports = function(passport,user){
 
@@ -63,8 +64,8 @@ passport.use('local-signup', new LocalStrategy(
         }
 
         if(newUser){
+          currentUser = newUser;
           return done(null,newUser);
-          
         }
 
 

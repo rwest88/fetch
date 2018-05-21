@@ -1,3 +1,5 @@
+var currentUser = require('../../../../app/config/currentUser.js');
+
 (function ($) {
     'use strict';
 
@@ -7,7 +9,6 @@
         url: '/api/pet',
         data: pet
       })
-      console.log('have this method return the promise from the jquery POST');
     }
 
     $('#addPetBtn').click(function () {
@@ -28,8 +29,8 @@
         type: $('#typefield').val().trim(),
         breed: $('#breedfield').val().trim(),
         about: $('#aboutfield').val().trim(),
-        UserId: 
-      }
+        UserId: currentUser.UserId
+      };
       createPet(pet).done((data) => {
         console.log(data);
       });

@@ -123,32 +123,33 @@
                                             Fetch your time here.
                                         </p>
                                     </div>
-                                    <form>
-                                        <div class="field">
+                                    <form id="createEngagement" name="createEngagement" 
+                                        method="post" action="/api/engagement">
+                                        <div class="field">1
                                             <div class="field">
                                                 <label class="label">Name</label>
                                                 <div class="control">
-                                                    <input class="input" type="text" placeholder="e.g Alex Smith">
+                                                    <input class="input" id=name="name" type="text" placeholder="e.g Alex Smith">
                                                 </div>
                                             </div>
 
                                             <div class="field">
                                                 <label class="label">Email</label>
                                                 <div class="control">
-                                                    <input class="input" type="email" placeholder="e.g. alexsmith@gmail.com">
+                                                    <input class="input" name="email" type="email" placeholder="e.g. alexsmith@gmail.com">
                                                 </div>
                                             </div>
                                             <div class="field">
                                                 <label class="label">Requested Date</label>
                                                 <div class="control">
-                                                    <input class="input" type="date" placeholder="05/01/2018">
+                                                    <input class="input" name="date" type="date" placeholder="05/01/2018">
                                                 </div>
                                             </div>
 
                                             <div class="field">
                                                 <label class="label">Address</label>
                                                 <div class="control">
-                                                    <input class="input" type="map" placeholder="123 Main Street">
+                                                    <input class="input" name="address" type="map" placeholder="123 Main Street">
                                                 </div>
                                             </div>
                                     </form>
@@ -255,44 +256,46 @@
                                         <p class="subtitle">
                                             Fetch your time here.
                                         </p>
-                                        <form>
+                                        <form id="eventForm">
                                             <div class="field">
-                                                <div class="field">
-                                                    <label class="label">Name</label>
-                                                    <div class="control">
-                                                        <input class="input" type="text" placeholder="e.g Alex Smith">
-                                                    </div>
+                                                <label class="label">Date</label>
+                                                <div class="control">
+                                                    <input class="input" type="text" 
+                                                        id="datepicker" placeholder="enter event date"></p>
                                                 </div>
-
-                                                <div class="field">
-                                                    <label class="label">Email</label>
-                                                    <div class="control">
-                                                        <input class="input" type="email" placeholder="e.g. alexsmith@gmail.com">
-                                                    </div>
+                                            </div>
+                                            <div class="field">
+                                                <label class="label">Event Name</label>
+                                                <div class="control">
+                                                    <input class="input" type="text" 
+                                                        placeholder="e.g. Holiday Christmas Party"
+                                                        id="eventNameField">
                                                 </div>
+                                            </div>
+                                            <div class="field">
+                                                <label class="label">Address</label>
+                                                <div class="control">
+                                                    <input class="input" type="text" 
+                                                        placeholder="e.g. 123 Whatever Way"
+                                                        id="eventAddressField">
+                                                </div>
+                                            </div>
                                         </form>
-
-                                    
-                                        </div>
-                                        </div>
-                                       
-                                    </div>
-                                    <div class="has-text-centered">
-                                        <a class="button is-primary" id="bookbtn">Book Now</a>
+                                        <button type="button" class="button" 
+                                            id="createEngagementBtn">Create Engagement</button>
                                     </div>
                                 </div>
-
-                                </div>
-                            </div> 
-
-
+                            </div>
+                            <div class="has-text-centered">
+                                <a class="button is-primary" id="bookbtn">Book Now</a>
+                            </div>
                         </div>
-
-
                     </div>
-
-            </section>
+                </div> 
             </div>
+        </div>
+    </section>
+        </div>
             {{/if}}
             <div id="calendar"></div>
         </div>
@@ -313,3 +316,6 @@
                 </footer>
             </div>
         </div>
+
+<script type="text/javascript" 
+    src="../../assets/scripts/services/dataServices/engagementService.js"></script>

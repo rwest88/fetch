@@ -8,7 +8,8 @@ var engagementService = (function ($) {
 
       create: function (data) {
         return $.ajax({
-          url: '/api/engagement/',
+          method: 'POST',
+          url: '/api/engagement',
           body: data
         });
       }

@@ -4,12 +4,13 @@ var petsPageBuilderService = (function ($, petsService) {
   return {
     buildPage: function () {
       petsService.getAllWithUser().then(function (petsData) {
-        var pet = null, petId = null;
-        
-        for (var i =0; i < petsData.length; i++) {
+        var pet = null,
+          petId = null;
+
+        for (var i = 0; i < petsData.length; i++) {
           pet = petsData[i];
           var petId = pet.id
-          var petString=`
+          var petString = `
               <div class="box">
                 <article class="media">
                   <div class="media-left">

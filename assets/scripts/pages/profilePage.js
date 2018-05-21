@@ -1,7 +1,6 @@
 $(document).ready(function () {
   
   
-
   $('#calendar').fullCalendar({
     // put your calendar options and callbacks here
   });

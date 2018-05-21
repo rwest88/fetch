@@ -24,7 +24,7 @@ module.exports = function (app, db, bodyParser, authCheckService, User) {
         
         var newPet = {
             name: req.body.name,
-            imageUrl: req.body.imageUrl,
+            //imageUrl: req.body.imageUrl,
             about: req.body.about,
             type: req.body.type, 
             breed: req.body.breed,

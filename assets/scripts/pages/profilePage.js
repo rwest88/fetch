@@ -6,6 +6,8 @@ $(document).ready(function () {
     // put your calendar options and callbacks here
   });
 
+  $("#datepicker").datepicker();  
+
   $("#createEngagementButton").on("click", function(){
     $("#addEngagementModal").addClass("is-active");
   });

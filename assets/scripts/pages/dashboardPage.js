@@ -1,4 +1,4 @@
-var currentUser = require('../../../../app/config/currentUser.js');
+var currentUser = null;
 
 (function ($) {
     'use strict';
@@ -29,7 +29,7 @@ var currentUser = require('../../../../app/config/currentUser.js');
         type: $('#typefield').val().trim(),
         breed: $('#breedfield').val().trim(),
         about: $('#aboutfield').val().trim(),
-        UserId: currentUser.UserId
+        UserId: 40
       };
       createPet(pet).done((data) => {
         console.log(data);

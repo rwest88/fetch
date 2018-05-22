@@ -8,6 +8,10 @@ var petsService = (function ($) {
 
     getAllWithUser: function () {
       return $.get("/api/pet/user");
+    },
+
+    getById: function (id) {
+      return $.get('/api/pet/' + id);
     }
   }; 
 })($);

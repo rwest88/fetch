@@ -45,6 +45,7 @@ require('./app/routes/htmlRoutes.js')(app, db, bodyParser, authCheckService);
 require('./app/routes/userRoute.js')(app, db, bodyParser, authCheckService);
 require('./app/routes/petRoute.js')(app, db, bodyParser, authCheckService);
 require('./app/routes/engagementsRoute.js')(app, db, bodyParser, authCheckService);
+require('./app/routes/currentUserRoute.js')(app, db, bodyParser, authCheckService);
 
 //Sync Database
 db.sequelize.sync().then(function(){

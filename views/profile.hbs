@@ -112,6 +112,7 @@
                     </div>
 
 
+<<<<<<< HEAD
                     <div class="tile is-parent">
                         <div class="tile is-child">
                             <div class="card">
@@ -129,9 +130,31 @@
                                             <label class="label">Name</label>
                                             <div class="control">
                                                 <input class="input" type="text" placeholder="e.g Alex Smith">
+=======
+                        <div class="tile is-parent">
+                            <div class="tile is-child">
+                                <div class="card">
+                                    <div class="card-content login">
+                                        <p class="title">
+                                            Found the one?
+                                        </p>
+                                        <p class="subtitle" id="cardSubtitle">
+                                            Fetch your time here.
+                                        </p>
+                                    </div>
+                                    <form id="createEngagement" name="createEngagement" 
+                                        method="post" action="/api/engagement">
+                                        <div class="field">1
+                                            <div class="field">
+                                                <label class="label">Name</label>
+                                                <div class="control">
+                                                    <input class="input" id=name="name" type="text" placeholder="e.g Alex Smith">
+                                                </div>
+>>>>>>> 8673b628de0d18f8396ac1ce1a577be39fcc4694
                                             </div>
                                         </div>
 
+<<<<<<< HEAD
                                         <div class="field">
                                             <label class="label">Email</label>
                                             <div class="control">
@@ -142,13 +165,34 @@
                                             <label class="label">Requested Date</label>
                                             <div class="control">
                                                 <input class="input" type="date" placeholder="05/01/2018">
+=======
+                                            <div class="field">
+                                                <label class="label">Email</label>
+                                                <div class="control">
+                                                    <input class="input" name="email" type="email" placeholder="e.g. alexsmith@gmail.com">
+                                                </div>
+                                            </div>
+                                            <div class="field">
+                                                <label class="label">Requested Date</label>
+                                                <div class="control">
+                                                    <input class="input" name="date" type="date" placeholder="05/01/2018">
+                                                </div>
+>>>>>>> 8673b628de0d18f8396ac1ce1a577be39fcc4694
                                             </div>
                                         </div>
 
+<<<<<<< HEAD
                                         <div class="field">
                                             <label class="label">Address</label>
                                             <div class="control">
                                                 <input class="input" type="map" placeholder="123 Main Street">
+=======
+                                            <div class="field">
+                                                <label class="label">Address</label>
+                                                <div class="control">
+                                                    <input class="input" name="address" type="map" placeholder="123 Main Street">
+                                                </div>
+>>>>>>> 8673b628de0d18f8396ac1ce1a577be39fcc4694
                                             </div>
                                         </div>
                                 </form>
@@ -255,22 +299,32 @@
                                         <p class="subtitle">
                                             Fetch your time here.
                                         </p>
-                                        <form>
+                                        <form id="eventForm">
                                             <div class="field">
-                                                <div class="field">
-                                                    <label class="label">Name</label>
-                                                    <div class="control">
-                                                        <input class="input" type="text" placeholder="e.g Alex Smith">
-                                                    </div>
+                                                <label class="label">Date</label>
+                                                <div class="control">
+                                                    <input class="input" type="text" 
+                                                        id="datepicker" placeholder="enter event date"></p>
                                                 </div>
-
-                                                <div class="field">
-                                                    <label class="label">Email</label>
-                                                    <div class="control">
-                                                        <input class="input" type="email" placeholder="e.g. alexsmith@gmail.com">
-                                                    </div>
+                                            </div>
+                                            <div class="field">
+                                                <label class="label">Event Name</label>
+                                                <div class="control">
+                                                    <input class="input" type="text" 
+                                                        placeholder="e.g. Holiday Christmas Party"
+                                                        id="eventNameField">
                                                 </div>
+                                            </div>
+                                            <div class="field">
+                                                <label class="label">Address</label>
+                                                <div class="control">
+                                                    <input class="input" type="text" 
+                                                        placeholder="e.g. 123 Whatever Way"
+                                                        id="eventAddressField">
+                                                </div>
+                                            </div>
                                         </form>
+<<<<<<< HEAD
 
 
                                         </div>
@@ -314,3 +368,43 @@
         </footer>
     </div>
 </div>
+=======
+                                        <button type="button" class="button" 
+                                            id="createEngagementBtn">Create Engagement</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="has-text-centered">
+                                <a class="button is-primary" id="bookbtn">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </section>
+        </div>
+            {{/if}}
+            <div id="calendar"></div>
+        </div>
+
+        <div id="addEngagementModal" class="modal">
+            <div class="modal-background"></div>
+            <div class="modal-card">
+                <header class="modal-card-head">
+                    <p class="modal-card-title">Modal title</p>
+                    <button class="delete" aria-label="close"></button>
+                </header>
+                <section class="modal-card-body">
+                    <!-- Content ... -->
+                </section>
+                <footer class="modal-card-foot">
+                    <button class="button is-success">Save changes</button>
+                    <button class="button" id="close-button">Cancel</button>
+                </footer>
+            </div>
+        </div>
+
+<script type="text/javascript" 
+    src="../../assets/scripts/services/dataServices/engagementService.js"></script>
+>>>>>>> 8673b628de0d18f8396ac1ce1a577be39fcc4694

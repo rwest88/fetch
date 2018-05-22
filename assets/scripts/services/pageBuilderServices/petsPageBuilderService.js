@@ -21,8 +21,11 @@ var petsPageBuilderService = (function ($, petsService) {
                             case "hamster": case "gerbil": 
                             case "mouse": case "rat": 
                             case "chinchilla": 
-                              return 'smallMammal'; 
-                            default: return pet.type.toLowerCase() || "";
+                              return 'smallMammal';
+                            case "dog": case "cat":
+                            case "snake": case "bird":
+                              return pet.type.toLowerCase();
+                            default: return "";
                           }
                         }()}Icon.png" alt="Image">
                     </figure>

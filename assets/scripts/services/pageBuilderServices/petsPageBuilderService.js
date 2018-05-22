@@ -14,16 +14,26 @@ var petsPageBuilderService = (function ($, petsService) {
                 <article class="media">
                   <div class="media-left">
                     <figure class="image is-64x64">
-                      <img src="assets/images/dogIcon.png" alt="Image">
+                      <img src="assets/images/${
+                        function() {
+                          switch (pet.type.toLowerCase()) {
+                            case "rabbit": case "bunny": 
+                            case "hamster": case "gerbil": 
+                            case "mouse": case "rat": 
+                            case "chinchilla": 
+                              return 'smallMammal'; 
+                            default: return pet.type.toLowerCase();
+                          }
+                        }()}Icon.png" alt="Image">
                     </figure>
                   </div>
                   <div class="media-content">
                     <div class="content">
                       <p>
                         <strong>${pet.name}</strong>
-                        <small>${pet.about}</small>
-                        <small>${pet.User.firstname} ${pet.User.lastname}</small>
-                        <small>${pet.type}</small>                        
+                        <small>${pet.type}</small>
+                        <small>${pet.breed}</small>
+                        <small>${pet.about}</small>                        
                       </p>
                     </div>
                     <div class="is-pulled-right">

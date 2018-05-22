@@ -6,7 +6,7 @@ var petsPageBuilderService = (function ($, petsService) {
       petsService.getAllWithUser().then(function (petsData) {
         var pet = null, petId = null;
         
-        for (var i =0; i < petsData.length; i++) {
+        for (var i in petsData) {
           pet = petsData[i];
           var petId = pet.id
           var petString=`
@@ -22,7 +22,7 @@ var petsPageBuilderService = (function ($, petsService) {
                             case "mouse": case "rat": 
                             case "chinchilla": 
                               return 'smallMammal'; 
-                            default: return pet.type.toLowerCase();
+                            default: return pet.type.toLowerCase() || "";
                           }
                         }()}Icon.png" alt="Image">
                     </figure>
@@ -30,11 +30,11 @@ var petsPageBuilderService = (function ($, petsService) {
                   <div class="media-content">
                     <div class="content">
                       <p>
-                        <strong>${pet.name}</strong>
-                        <small>${pet.type}</small>
-                        <small>${pet.breed}</small>
-                        <small>${pet.about}</small>                        
+                        <strong>${pet.name} - </strong>
+                        <small>${pet.type} - </small>
+                        <small>${pet.breed}</small>                  
                       </p>
+                      <p><small>${pet.about}</small></p>
                     </div>
                     <div class="is-pulled-right">
                       <a class="button" href="/profile/pet/${pet.id}">View Profile</a>

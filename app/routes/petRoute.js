@@ -1,10 +1,4 @@
 module.exports = function (app, db, bodyParser, authCheckService, User) {
-    app.use(bodyParser.urlencoded({
-        extended: true
-    }));
-    
-    app.use(bodyParser.json());    
-
     app.get('/api/pet', authCheckService.isAuthenticated, (req, res) => {
         db.Pet.findAll({}).then(function (pets) {
             res.send(pets);

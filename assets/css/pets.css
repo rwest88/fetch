@@ -6,8 +6,17 @@ body {
     color: #507050 !important;
 }
 
-.is-primary {
+.is-primary  {
     background-color: #507050 !important;
+    color: white; 
+
+}
+
+.is-large {
+    background-color: #507050 !important;
+    color: white; 
+    margin: 15px; 
+    font-family: 'Montserrat', sans-serif;
 }
 
 .navbar-item {
@@ -79,8 +88,15 @@ p {
     padding: 3px; 
 }
 
-#bookbtn {
+#createEngagementBtn {
     padding: 10px; 
     align-content: center;
 }
 
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300; 
+    color: darkgray;
+    font-size: 18px; 
+    margin-top: 10px; 
+}

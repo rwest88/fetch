@@ -46,6 +46,12 @@
       getCurrentUser().then((currentUserData) => {
         currentUser = currentUserData;
       });
+
+      engagementService.getAll().then(function (engagements) {
+        for (var i = 0; i < engagements.length; i++) {
+          console.log(engagements[i]);
+        }
+      });     
     }
 
     init();

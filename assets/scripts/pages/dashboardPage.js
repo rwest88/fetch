@@ -49,7 +49,12 @@
 
       engagementService.getAll().then(function (engagements) {
         for (var i = 0; i < engagements.length; i++) {
-          console.log(engagements[i]);
+          var event = {
+            id: 1, 
+            title: engagements[i].name, 
+            start: engagements[i].date
+          };
+          $('#calendar').fullCalendar( 'renderEvent', event, true);
         }
       });     
     }

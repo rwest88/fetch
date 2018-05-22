@@ -36,7 +36,10 @@ $(document).ready(function () {
 
       engagementService.create(newEngagement).then(function (engagement) {
         console.log(engagement);
+        
       });
+
+      window.location.href = '../../dashboard';
     });
   });
 });

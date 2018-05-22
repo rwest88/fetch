@@ -6,24 +6,36 @@ var petsPageBuilderService = (function ($, petsService) {
       petsService.getAllWithUser().then(function (petsData) {
         var pet = null, petId = null;
         
-        for (var i =0; i < petsData.length; i++) {
+        for (var i in petsData) {
           pet = petsData[i];
           var petId = pet.id
           var petString=`
               <div class="box">
                 <article class="media">
                   <div class="media-left">
-                    <figure class="image is-64x64">
-                      <img src="assets/images/dogIcon.png" alt="Image">
+                    <figure class="image" style="max-width: 88px">
+                      <img src="assets/images/${
+                        function() {
+                          switch (pet.type.toLowerCase()) {
+                            case "rabbit": case "bunny": 
+                            case "hamster": case "gerbil": 
+                            case "mouse": case "rat": 
+                            case "chinchilla": 
+                              return 'smallMammal';
+                            case "dog": case "cat":
+                            case "snake": case "bird":
+                              return pet.type.toLowerCase();
+                            default: return "";
+                          }
+                        }()}Icon.png" alt="Image">
                     </figure>
                   </div>
                   <div class="media-content">
                     <div class="content">
                       <p>
-                        <strong>${pet.name}</strong>
-                        <small>${pet.about}</small>
-                        <small>${pet.User.firstname} ${pet.User.lastname}</small>
-                        <small>${pet.type}</small>                        
+                        <strong>${pet.name} - </strong>
+                        <small>${pet.type} - </small>
+                        <small>${pet.breed}</small>                  
                       </p>
                     </div>
                     <div class="is-pulled-right">
@@ -36,6 +48,7 @@ var petsPageBuilderService = (function ($, petsService) {
                             <i class="fas fa-info-circle"></i>
                           </span>
                         </a>
+                        <p><small>${pet.about}</small></p>
                       </div>
                     </nav>
                   </div>

@@ -18,11 +18,13 @@
     $('#addPetBtn').click(function () {
         console.log('inside click event');
         $('#addPetModal').addClass('is-active');
-
     }); 
 
     $('#cancel').click( () => {
-      //event.preventDefault();
+      $('#addPetModal').removeClass('is-active');
+    });
+
+    $('.delete').click( () => {
       $('#addPetModal').removeClass('is-active');
     });
 

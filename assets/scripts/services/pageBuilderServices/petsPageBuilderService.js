@@ -13,7 +13,7 @@ var petsPageBuilderService = (function ($, petsService) {
               <div class="box">
                 <article class="media">
                   <div class="media-left">
-                    <figure class="image is-64x64">
+                    <figure class="image" style="max-width: 88px">
                       <img src="assets/images/${
                         function() {
                           switch (pet.type.toLowerCase()) {
@@ -37,7 +37,6 @@ var petsPageBuilderService = (function ($, petsService) {
                         <small>${pet.type} - </small>
                         <small>${pet.breed}</small>                  
                       </p>
-                      <p><small>${pet.about}</small></p>
                     </div>
                     <div class="is-pulled-right">
                       <a class="button" href="/profile/pet/${pet.id}">View Profile</a>
@@ -49,6 +48,7 @@ var petsPageBuilderService = (function ($, petsService) {
                             <i class="fas fa-info-circle"></i>
                           </span>
                         </a>
+                        <p><small>${pet.about}</small></p>
                       </div>
                     </nav>
                   </div>

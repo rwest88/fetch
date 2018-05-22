@@ -23,6 +23,7 @@ a.navbar-item:hover, a.navbar-item.is-active, .navbar-link:hover, .navbar-link.i
 #profile {
     max-width: 1080px !important;
     margin-top: 100px;
+    padding: 20px;
 }
 
 .icon {
@@ -54,11 +55,18 @@ p {
 
 .content {
     padding-right: 20px;
+    padding-bottom: 20px;
 }
  
 .tile.is-7 {
     flex: none;
     color: #507050;
+}
+
+@media screen and (min-width: 769px) {
+.tile.is-7 {
+    width: 66%;
+}
 }
 
 
@@ -70,10 +78,10 @@ p {
     margin-top: 2em;
 }
 
-
+/*
 .card {
     height: 500px;
-}
+} */
 
 .field {
     padding: 3px; 
@@ -84,3 +92,13 @@ p {
     align-content: center;
 }
 
+#buttonDiv {
+    padding: 20px 0px;
+}
+
+@media screen and (min-width: 1000px) {
+.tile:not(.is-child) {
+    display: ;
+    
+}
+}

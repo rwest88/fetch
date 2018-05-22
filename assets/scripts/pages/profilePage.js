@@ -3,11 +3,18 @@ $(document).ready(function () {
   var $datePicker = $("#datepicker");
   var $eventNameField = $('#eventNameField');
   var $eventAddressField = $('#eventAddressField');
-  
+  var petId = null;
+
   $datePicker.datepicker();
   
   function getCurrentUser() {
     return $.get('/api/currentUser');
+  }
+
+  function getIdFromRoute() {
+    var url = location.href;
+    var petId = url.substring(url.lastIndexOf('/') + 1);
+    return parseInt(petId);
   }
 
   $('#calendar').fullCalendar({
@@ -18,11 +25,6 @@ $(document).ready(function () {
     var engagementDate = $datePicker.val();
     var eventName = $eventNameField.val();
     var eventAddress = $eventAddressField.val();
-
-    // getting pet id based on page URL
-    var url = location.href;
-    var petId = url.substring(url.lastIndexOf('/') + 1);
-    petId = parseInt(petId);
 
     // create the engagement
     getCurrentUser().then(function (currentUserData) {
@@ -36,10 +38,21 @@ $(document).ready(function () {
 
       engagementService.create(newEngagement).then(function (engagement) {
         console.log(engagement);
-        
       });
 
       window.location.href = '../../dashboard';
     });
   });
+
+  function init() {
+    petId = getIdFromRoute();
+    petsService.getById(petId).then(function (petData) {
+      $('#petAbout').text(petData.about);
+      $('#petName').text(petData.name);
+      $('#petTypeHeader').text(petData.type);
+      $('#petBreedHeader').text(petData.breed);
+    });
+  }
+
+  init();
 });

@@ -1,10 +1,4 @@
 module.exports = function (app, db, bodyParser, authCheckService, User) {
-    app.use(bodyParser.urlencoded({
-        extended: true
-    }));
-    
-    app.use(bodyParser.json());    
-
     app.get('/api/pet', authCheckService.isAuthenticated, (req, res) => {
         db.Pet.findAll({}).then(function (pets) {
             res.send(pets);
@@ -17,6 +11,17 @@ module.exports = function (app, db, bodyParser, authCheckService, User) {
         }).then(function (pets) {
             res.send(pets);
         }); 
+    });
+
+    app.get('/api/pet/:petId', authCheckService.isAuthenticated, (req, res) => {
+        db.Pet.find({
+            include: [db.User],
+            where: {
+                id: req.params.petId 
+            }
+        }).then(function (pets) {
+            res.send(pets);
+        });
     });
 
     app.post('/api/pet', authCheckService.isAuthenticated, (req, res) => {

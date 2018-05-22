@@ -38,21 +38,23 @@ module.exports = function (app, db, bodyParser, authCheckService) {
         });    
     });
 
-    app.post('/api/engagement/pet/:PetId/user/:UserId', 
-        authCheckService.isAuthenticated, (req, res) => {
+    app.post('/api/engagement', 
+        authCheckService.isAuthenticated, 
+        (req, res) => {
+        console.log("request"+JSON.stringify(req.body));
         
         var newEngagement = {
-            date: req.body.date,
             name: req.body.name,
-            address: req.body.address,
-            UserId: req.params.UserId,
-            PetId: req.params.PetId
+            date: req.body.date,
+            address: req.body.address, 
+            UserId: req.body.UserId,
+            PetId: req.body.PetId
         };
 
-        db.Engagement.create(newEngagement).then((response) => {
-            res.status(201).send(response);
+        db.Engagement.create(newEngagement).then((engagementResponse) => {
+            res.status(201).send(engagementResponse);
         }).catch((err) => {
-            res.status(500).send('Ooopsie whoopsie: ' + err);
+            res.status(500).send('Ooopsie whoopsie ' + err);
         });
     });
 

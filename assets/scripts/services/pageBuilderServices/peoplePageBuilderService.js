@@ -22,7 +22,7 @@ var peoplePageBuilderService = (function ($, peopleService) {
                     </p>
                   </div>
                   <div class="is-pulled-right">
-                    <a class="button" href="/profile/user/${peopleData[i].id}">View Profile</a>
+                    <a class="button hvr-box-shadow-outset" href="/profile/user/${peopleData[i].id}">View Profile</a>
                   </div>
                   <nav class="level is-mobile">
                     <div class="level-left">

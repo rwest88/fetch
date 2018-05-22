@@ -19,9 +19,7 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-.navbar-item {
-    color: #507050;
-}
+
 
 a.navbar-item:hover, a.navbar-item.is-active, .navbar-link:hover, .navbar-link.is-active {
     background-color: #507050;
@@ -96,21 +94,23 @@ p {
     padding: 3px; 
 }
 
+
 #createEngagementBtn {
     padding: 10px; 
     align-content: center;
+    display: flex;
+    justify-content: center;
 }
+
+
 
 #buttonDiv {
     padding: 20px 0px;
 }
 
-@media screen and (min-width: 1000px) {
-.tile:not(.is-child) {
-    display: ;
-    
-}
-}
+
+
+
 h3 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 300; 
@@ -118,3 +118,27 @@ h3 {
     font-size: 18px; 
     margin-top: 10px; 
 }
+
+
+a {
+    color: #507050;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.hvr-box-shadow-outset {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: box-shadow;
+    transition-property: box-shadow;
+  }
+  .hvr-box-shadow-outset:hover, .hvr-box-shadow-outset:focus, .hvr-box-shadow-outset:active {
+    box-shadow: 2px 2px 2px rgba(80, 112, 80);
+    color: white;
+    border: white;
+  }
